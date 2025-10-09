@@ -60,6 +60,10 @@ def popDataFrame():
             time.sleep(5) # Hit limiting to adhere to basketball reference scraping rules
             soup = bs4.BeautifulSoup(response.text, "lxml")
             roster = soup.find("table", id="roster")
-            print(roster.prettify())
+            for tr in roster.find_all("tr"):
+                tds = tr.find_all("td")
+                # use tds array to populate table
         except Exception as e:
             print(f"Could not scrape roster for {nba_playoff_teams_2024[team]}: {e}")
+
+popDataFrame()
