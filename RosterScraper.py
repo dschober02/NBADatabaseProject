@@ -49,7 +49,7 @@ def popDataFrame():
     dataFrame = {
         "Player ID" : [],
         "Player Name" : [],
-        "Team": [],
+        "Team Code": [],
         "Position" : [],
         "Height" : [],
         "Weight" : []
