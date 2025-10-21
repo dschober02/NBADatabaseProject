@@ -43,26 +43,42 @@ URL1 = "https://www.basketball-reference.com/teams/"
 URL2 = "/2025.html#all_roster"
 
 # We will make up a fake player ID using a counter, all else will be grabbed from basketball-reference.com
-dataFrame = {
-    "Player ID" : [],
-    "Team": [],
-    "Position" : [],
-    "Height" : []
-}
-pd = pd.DataFrame(dataFrame)
+
 
 def popDataFrame():
+    dataFrame = {
+        "Player ID" : [],
+        "Player Name" : [],
+        "Team": [],
+        "Position" : [],
+        "Height" : [],
+        "Weight" : []
+    }
+    df = pd.DataFrame(dataFrame)
+    counter = 0  # This is for the created player id
     for team in nba_playoff_teams_2024.keys():
         print(team)
         try:
             # URL composition: "https://www.basketball-reference.com/teams/" + "BOS" + "/2025.html#all_roster"
             response = requests.get((URL1 + team + URL2), headers=HEADERS)
-            time.sleep(5) # Hit limiting to adhere to basketball reference scraping rules
+            time.sleep(3) # Hit limiting to adhere to basketball reference scraping rules
             soup = bs4.BeautifulSoup(response.text, "lxml")
             roster = soup.find("table", id="roster")
-            for tr in roster.find_all("tr"):
-                tds = tr.find_all("td")
-                # use tds array to populate table
+            for row in roster.find_all('tr'):
+                columns = row.find_all(['td', 'th'])
+                # data - ['No.', 'Player', 'Pos', 'Ht', 'Wt', 'Birth Date', 'Birth', 'Exp', 'College']
+                data = [col.get_text(strip=True) for col in columns]
+                print(len(data))
+                counter += 1
+                tuple = {
+                    'Player ID' : counter,
+                    'Player Name' : data[1],
+                    'Team Code' : team,
+                    'Position' : data[2],
+                    'Height' : data[3],
+                    'Weight' : data[4],}
+                df.loc[len(df)] = tuple
+            print(df)
         except Exception as e:
             print(f"Could not scrape roster for {nba_playoff_teams_2024[team]}: {e}")
 
