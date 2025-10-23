@@ -45,7 +45,8 @@ URL2 = "/2025.html#all_roster"
 # We will make up a fake player ID using a counter, all else will be grabbed from basketball-reference.com
 
 
-def popDataFrame():
+def rosterInserts():
+    out = open("rosterInserts.txt", "w")
     dataFrame = {
         "Player ID" : [],
         "Player Name" : [],
@@ -64,22 +65,59 @@ def popDataFrame():
             time.sleep(3) # Hit limiting to adhere to basketball reference scraping rules
             soup = bs4.BeautifulSoup(response.text, "lxml")
             roster = soup.find("table", id="roster")
+            # table creation statement
+            # NOTE: Will have to create teams table first due to foreign key constraint in roster
+            sql = f"""
+            CREATE TABLE roster(
+                Player_ID INT NOT NULL PRIMARY KEY,
+                Player_Name VARCHAR,
+                Team_Code VARCHAR(3) NOT NULL FOREIGN KEY,
+                Position VARCHAR,
+                Height VARCHAR,
+                Weight VARCHAR
+            );
+            """
+            out.write(sql)
             for row in roster.find_all('tr'):
                 columns = row.find_all(['td', 'th'])
                 # data - ['No.', 'Player', 'Pos', 'Ht', 'Wt', 'Birth Date', 'Birth', 'Exp', 'College']
                 data = [col.get_text(strip=True) for col in columns]
-                print(len(data))
-                counter += 1
-                tuple = {
-                    'Player ID' : counter,
-                    'Player Name' : data[1],
-                    'Team Code' : team,
-                    'Position' : data[2],
-                    'Height' : data[3],
-                    'Weight' : data[4],}
-                df.loc[len(df)] = tuple
+                if data[1] != "Player":
+                    counter += 1
+                    row = {
+                        'Player ID' : counter,
+                        'Player Name' : data[1],
+                        'Team Code' : team,
+                        'Position' : data[2],
+                        'Height' : data[3],
+                        'Weight' : data[4],}
+                    df.loc[len(df)] = row
             print(df)
+            for _, row in df.iterrows():
+                sql = f"""
+                INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+                VALUES ({row['Player ID']}, {row['Player Name']}, {row['Team Code']}, {row['Position']}, {row['Height']}, {row['Weight']});"""
+                out.write(sql)
         except Exception as e:
             print(f"Could not scrape roster for {nba_playoff_teams_2024[team]}: {e}")
 
-popDataFrame()
+    out.close()
+
+def teamsInserts():
+    out = open("teamsInserts.txt", "w")
+    sql = f"""
+                CREATE TABLE teams(
+                    Team_Code VARCHAR(3) NOT NULL PRIMARY KEY,
+                    Team_Name VARCHAR
+                );
+                """
+    # team is the three-character code for the playoff teams
+    for team in nba_playoff_teams_2024.keys():
+        sql = f"""
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ({nba_playoff_teams_2024[team]}, {team}); 
+        """
+        out.write(sql)
+    out.close()
+rosterInserts()
+teamsInserts()
+
