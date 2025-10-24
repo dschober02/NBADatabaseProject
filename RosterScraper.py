@@ -57,6 +57,20 @@ def rosterInserts():
     }
     df = pd.DataFrame(dataFrame)
     counter = 0  # This is for the created player id
+    # table creation statement
+    # NOTE: Will have to create teams table first due to foreign key constraint in roster
+    sql = f"""
+    CREATE TABLE roster (
+        Player_ID INT NOT NULL PRIMARY KEY,
+        Player_Name VARCHAR(100),
+        Team_Code VARCHAR(3) NOT NULL,
+        Position VARCHAR(50),
+        Height VARCHAR(10),
+        Weight VARCHAR(10),
+        FOREIGN KEY (Team_Code) REFERENCES teams(Team_Code)
+);
+    """
+    out.write(sql)
     for team in nba_playoff_teams_2024.keys():
         print(team)
         try:
@@ -65,24 +79,13 @@ def rosterInserts():
             time.sleep(3) # Hit limiting to adhere to basketball reference scraping rules
             soup = bs4.BeautifulSoup(response.text, "lxml")
             roster = soup.find("table", id="roster")
-            # table creation statement
-            # NOTE: Will have to create teams table first due to foreign key constraint in roster
-            sql = f"""
-            CREATE TABLE roster(
-                Player_ID INT NOT NULL PRIMARY KEY,
-                Player_Name VARCHAR,
-                Team_Code VARCHAR(3) NOT NULL FOREIGN KEY,
-                Position VARCHAR,
-                Height VARCHAR,
-                Weight VARCHAR
-            );
-            """
-            out.write(sql)
             for row in roster.find_all('tr'):
                 columns = row.find_all(['td', 'th'])
                 # data - ['No.', 'Player', 'Pos', 'Ht', 'Wt', 'Birth Date', 'Birth', 'Exp', 'College']
                 data = [col.get_text(strip=True) for col in columns]
                 if data[1] != "Player":
+                    if '\'' in data[1]:
+                        data[1] = data[1].replace('\'', '`')
                     counter += 1
                     row = {
                         'Player ID' : counter,
@@ -93,14 +96,14 @@ def rosterInserts():
                         'Weight' : data[4],}
                     df.loc[len(df)] = row
             print(df)
-            for _, row in df.iterrows():
-                sql = f"""
-                INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
-                VALUES ({row['Player ID']}, {row['Player Name']}, {row['Team Code']}, {row['Position']}, {row['Height']}, {row['Weight']});"""
-                out.write(sql)
+
         except Exception as e:
             print(f"Could not scrape roster for {nba_playoff_teams_2024[team]}: {e}")
-
+    for _, row in df.iterrows():
+        sql = f"""
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES ({row['Player ID']}, '{row['Player Name']}', '{row['Team Code']}', '{row['Position']}', '{row['Height']}', '{row['Weight']}');"""
+        out.write(sql)
     out.close()
 
 def teamsInserts():
@@ -111,13 +114,16 @@ def teamsInserts():
                     Team_Name VARCHAR
                 );
                 """
+    out.write(sql)
     # team is the three-character code for the playoff teams
     for team in nba_playoff_teams_2024.keys():
         sql = f"""
-        INSERT INTO teams (Team_Name, Team_Code) VALUES ({nba_playoff_teams_2024[team]}, {team}); 
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('{nba_playoff_teams_2024[team]}'   , '{team}'); 
         """
         out.write(sql)
     out.close()
 rosterInserts()
 teamsInserts()
+
+
 
