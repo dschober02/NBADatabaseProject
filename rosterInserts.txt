@@ -1,0 +1,703 @@
+
+    CREATE TABLE roster (
+        Player_ID INT NOT NULL PRIMARY KEY,
+        Player_Name VARCHAR(100),
+        Team_Code VARCHAR(3) NOT NULL,
+        Position VARCHAR(50),
+        Height VARCHAR(10),
+        Weight VARCHAR(10),
+        FOREIGN KEY (Team_Code) REFERENCES teams(Team_Code)
+);
+    
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (1, 'Jaylen Brown', 'BOS', 'SF', '6-6', '223');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (2, 'Torrey Craig', 'BOS', 'SF', '6-7', '221');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (3, 'JD Davison', 'BOS', 'PG', '6-1', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (4, 'Sam Hauser', 'BOS', 'PF', '6-8', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (5, 'Jrue Holiday', 'BOS', 'PG', '6-4', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (6, 'Al Horford', 'BOS', 'C', '6-9', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (7, 'Luke Kornet', 'BOS', 'C', '7-2', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (8, 'Miles Norris', 'BOS', 'PF', '6-10', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (9, 'Drew Peterson', 'BOS', 'PF', '6-9', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (10, 'Kristaps PorziÅÄ£is', 'BOS', 'C', '7-2', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (11, 'Payton Pritchard', 'BOS', 'PG', '6-1', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (12, 'Neemias Queta', 'BOS', 'C', '7-0', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (13, 'Baylor Scheierman', 'BOS', 'SG', '6-6', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (14, 'Jaden Springer', 'BOS', 'SG', '6-4', '204');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (15, 'Jayson Tatum', 'BOS', 'PF', '6-8', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (16, 'Xavier Tillman Sr.', 'BOS', 'C', '6-8', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (17, 'Jordan Walsh', 'BOS', 'PF', '6-7', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (18, 'Derrick White', 'BOS', 'SG', '6-4', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (19, 'Precious Achiuwa', 'NYK', 'C', '6-8', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (20, 'OG Anunoby', 'NYK', 'PF', '6-7', '232');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (21, 'MarJon Beauchamp', 'NYK', 'SF', '6-6', '199');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (22, 'Mikal Bridges', 'NYK', 'SF', '6-6', '209');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (23, 'Jalen Brunson', 'NYK', 'PG', '6-2', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (24, 'Pacome Dadiet', 'NYK', 'SG', '6-7', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (25, 'Josh Hart', 'NYK', 'SG', '6-4', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (26, 'Ariel Hukporti', 'NYK', 'C', '7-0', '246');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (27, 'Tyler Kolek', 'NYK', 'PG', '6-1', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (28, 'Miles McBride', 'NYK', 'PG', '6-2', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (29, 'Kevin McCullar Jr.', 'NYK', 'SF', '6-6', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (30, 'Cameron Payne', 'NYK', 'PG', '6-3', '183');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (31, 'Mitchell Robinson', 'NYK', 'C', '7-0', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (32, 'Matt Ryan', 'NYK', 'SF', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (33, 'Landry Shamet', 'NYK', 'SG', '6-4', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (34, 'Jericho Sims', 'NYK', 'C', '6-10', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (35, 'Jacob Toppin', 'NYK', 'SF', '6-9', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (36, 'Karl-Anthony Towns', 'NYK', 'C', '7-0', '248');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (37, 'P.J. Tucker', 'NYK', 'SF', '6-5', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (38, 'Anton Watson', 'NYK', 'SF', '6-8', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (39, 'Delon Wright', 'NYK', 'PG', '6-5', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (40, 'Giannis Antetokounmpo', 'MIL', 'PF', '6-11', '242');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (41, 'MarJon Beauchamp', 'MIL', 'SF', '6-6', '199');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (42, 'Jamaree Bouyea', 'MIL', 'PG', '6-2', '180');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (43, 'Pat Connaughton', 'MIL', 'SG', '6-5', '209');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (44, 'A.J. Green', 'MIL', 'SG', '6-4', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (45, 'Andre Jackson Jr.', 'MIL', 'SG', '6-6', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (46, 'AJ Johnson', 'MIL', 'SG', '6-4', '160');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (47, 'Kyle Kuzma', 'MIL', 'PF', '6-9', '221');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (48, 'Damian Lillard', 'MIL', 'PG', '6-2', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (49, 'Chris Livingston', 'MIL', 'SF', '6-6', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (50, 'Brook Lopez', 'MIL', 'C', '7-1', '282');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (51, 'Khris Middleton', 'MIL', 'SF', '6-7', '222');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (52, 'Pete Nance', 'MIL', 'PF', '6-11', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (53, 'Kevin Porter Jr.', 'MIL', 'SG', '6-4', '203');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (54, 'Bobby Portis', 'MIL', 'PF', '6-10', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (55, 'Taurean Prince', 'MIL', 'SF', '6-6', '218');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (56, 'Liam Robbins', 'MIL', 'C', '7-0', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (57, 'Ryan Rollins', 'MIL', 'PG', '6-4', '180');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (58, 'Jericho Sims', 'MIL', 'C', '6-10', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (59, 'Tyler Smith', 'MIL', 'PF', '6-11', '224');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (60, 'Gary Trent Jr.', 'MIL', 'SG', '6-5', '209');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (61, 'Stanley Umude', 'MIL', 'SG', '6-6', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (62, 'Delon Wright', 'MIL', 'PG', '6-5', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (63, 'Jarrett Allen', 'CLE', 'C', '6-11', '243');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (64, 'Emoni Bates', 'CLE', 'SF', '6-10', '170');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (65, 'Darius Garland', 'CLE', 'PG', '6-1', '192');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (66, 'Javonte Green', 'CLE', 'SG', '6-4', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (67, 'De`Andre Hunter', 'CLE', 'SF', '6-8', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (68, 'Ty Jerome', 'CLE', 'SG', '6-5', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (69, 'Caris LeVert', 'CLE', 'SF', '6-6', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (70, 'Sam Merrill', 'CLE', 'SG', '6-4', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (71, 'Donovan Mitchell', 'CLE', 'SG', '6-3', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (72, 'Evan Mobley', 'CLE', 'PF', '6-11', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (73, 'Georges Niang', 'CLE', 'PF', '6-7', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (74, 'Chuma Okeke', 'CLE', 'PF', '6-6', '229');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (75, 'Isaac Okoro', 'CLE', 'SG', '6-5', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (76, 'Craig Porter Jr.', 'CLE', 'PG', '6-2', '186');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (77, 'Max Strus', 'CLE', 'SF', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (78, 'Tristan Thompson', 'CLE', 'C', '6-9', '254');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (79, 'JT Thor', 'CLE', 'PF', '6-10', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (80, 'Nae`Qwan Tomlin', 'CLE', 'PF', '6-10', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (81, 'Luke Travers', 'CLE', 'SG', '6-8', '199');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (82, 'Jaylon Tyson', 'CLE', 'SG', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (83, 'Dean Wade', 'CLE', 'PF', '6-9', '228');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (84, 'Cole Anthony', 'ORL', 'PG', '6-2', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (85, 'Paolo Banchero', 'ORL', 'PF', '6-10', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (86, 'Goga Bitadze', 'ORL', 'C', '6-11', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (87, 'Anthony Black', 'ORL', 'PG', '6-7', '198');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (88, 'Kentavious Caldwell-Pope', 'ORL', 'SG', '6-5', '204');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (89, 'Wendell Carter Jr.', 'ORL', 'C', '6-10', '270');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (90, 'Tristan Da Silva', 'ORL', 'SF', '6-8', '217');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (91, 'Gary Harris', 'ORL', 'SG', '6-4', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (92, 'Caleb Houstan', 'ORL', 'SF', '6-8', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (93, 'Jett Howard', 'ORL', 'SF', '6-8', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (94, 'Jonathan Isaac', 'ORL', 'PF', '6-10', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (95, 'Cory Joseph', 'ORL', 'PG', '6-2', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (96, 'Mac McClung', 'ORL', 'SG', '6-2', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (97, 'Trevelin Queen', 'ORL', 'SG', '6-6', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (98, 'Jalen Suggs', 'ORL', 'PG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (99, 'Franz Wagner', 'ORL', 'SF', '6-10', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (100, 'Moritz Wagner', 'ORL', 'C', '6-11', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (101, 'Tony Bradley', 'IND', 'C', '6-10', '248');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (102, 'Moses Brown', 'IND', 'C', '7-2', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (103, 'Thomas Bryant', 'IND', 'C', '6-10', '248');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (104, 'RayJ Dennis', 'IND', 'PG', '6-2', '180');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (105, 'Enrique Freeman', 'IND', 'PF', '6-7', '206');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (106, 'Johnny Furphy', 'IND', 'SG', '6-8', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (107, 'Tyrese Haliburton', 'IND', 'PG', '6-5', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (108, 'Isaiah Jackson', 'IND', 'C', '6-10', '206');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (109, 'Quenton Jackson', 'IND', 'PG', '6-5', '175');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (110, 'James Johnson', 'IND', 'PF', '6-7', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (111, 'Bennedict Mathurin', 'IND', 'SF', '6-6', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (112, 'T.J. McConnell', 'IND', 'PG', '6-1', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (113, 'Andrew Nembhard', 'IND', 'SG', '6-5', '193');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (114, 'Aaron Nesmith', 'IND', 'SF', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (115, 'Tristen Newton', 'IND', 'SG', '6-5', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (116, 'Jahlil Okafor', 'IND', 'C', '6-10', '270');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (117, 'Ben Sheppard', 'IND', 'SG', '6-6', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (118, 'Pascal Siakam', 'IND', 'PF', '6-8', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (119, 'Obi Toppin', 'IND', 'PF', '6-9', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (120, 'Myles Turner', 'IND', 'C', '6-11', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (121, 'Jarace Walker', 'IND', 'PF', '6-8', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (122, 'James Wiseman', 'IND', 'C', '7-0', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (123, 'Bam Adebayo', 'MIA', 'C', '6-9', '255');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (124, 'Kyle Anderson', 'MIA', 'SF', '6-9', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (125, 'Thomas Bryant', 'MIA', 'C', '6-10', '248');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (126, 'Alec Burks', 'MIA', 'SG', '6-6', '214');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (127, 'Jimmy Butler', 'MIA', 'PF', '6-7', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (128, 'Josh Christopher', 'MIA', 'SG', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (129, 'Tyler Herro', 'MIA', 'SG', '6-5', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (130, 'Haywood Highsmith', 'MIA', 'SF', '6-7', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (131, 'Jaime Jaquez Jr.', 'MIA', 'SF', '6-6', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (132, 'Keshad Johnson', 'MIA', 'SF', '6-6', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (133, 'Nikola JoviÄ', 'MIA', 'PF', '6-10', '209');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (134, 'Pelle Larsson', 'MIA', 'SG', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (135, 'Kevin Love', 'MIA', 'PF', '6-8', '251');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (136, 'Davion Mitchell', 'MIA', 'PG', '6-2', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (137, 'Josh Richardson', 'MIA', 'SG', '6-5', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (138, 'Duncan Robinson', 'MIA', 'SF', '6-7', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (139, 'Terry Rozier', 'MIA', 'PG', '6-1', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (140, 'Dru Smith', 'MIA', 'SG', '6-3', '203');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (141, 'Isaiah Stevens', 'MIA', 'PG', '6-0', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (142, 'Kel`el Ware', 'MIA', 'C', '7-0', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (143, 'Andrew Wiggins', 'MIA', 'SF', '6-7', '197');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (144, 'Marcus Bagley', 'PHI', 'SF', '6-8', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (145, 'Adem Bona', 'PHI', 'C', '6-10', '235');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (146, 'Oshae Brissett', 'PHI', 'SF', '6-7', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (147, 'Jared Butler', 'PHI', 'SG', '6-3', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (148, 'Colin Castleton', 'PHI', 'C', '6-11', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (149, 'Ricky Council IV', 'PHI', 'SF', '6-6', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (150, 'Jeff Dowtin Jr.', 'PHI', 'PG', '6-3', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (151, 'Andre Drummond', 'PHI', 'C', '6-11', '279');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (152, 'Justin Edwards', 'PHI', 'SF', '6-6', '203');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (153, 'Joel Embiid', 'PHI', 'C', '7-0', '280');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (154, 'Paul George', 'PHI', 'PF', '6-8', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (155, 'Eric Gordon', 'PHI', 'SG', '6-3', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (156, 'Quentin Grimes', 'PHI', 'SG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (157, 'Jalen Hood-Schifino', 'PHI', 'SG', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (158, 'Reggie Jackson', 'PHI', 'PG', '6-2', '208');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (159, 'Kyle Lowry', 'PHI', 'PG', '6-0', '196');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (160, 'Caleb Martin', 'PHI', 'SF', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (161, 'KJ Martin', 'PHI', 'PF', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (162, 'Tyrese Maxey', 'PHI', 'PG', '6-2', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (163, 'Jared McCain', 'PHI', 'SG', '6-2', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (164, 'Isaiah Mobley', 'PHI', 'PF', '6-8', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (165, 'Pete Nance', 'PHI', 'C', '6-11', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (166, 'Chuma Okeke', 'PHI', 'PF', '6-6', '229');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (167, 'Kelly Oubre Jr.', 'PHI', 'SF', '6-8', '203');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (168, 'Lester QuiÃ±ones', 'PHI', 'SG', '6-5', '208');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (169, 'Alex Reese', 'PHI', 'PF', '6-9', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (170, 'David Roddy', 'PHI', 'PF', '6-4', '255');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (171, 'Lonnie Walker IV', 'PHI', 'SG', '6-4', '204');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (172, 'Phillip Wheeler', 'PHI', 'PF', '6-9', '211');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (173, 'Guerschon Yabusele', 'PHI', 'C', '6-8', '260');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (174, 'Branden Carlson', 'OKC', 'C', '7-0', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (175, 'Alex Caruso', 'OKC', 'SG', '6-5', '186');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (176, 'Ousmane Dieng', 'OKC', 'C', '6-10', '222');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (177, 'Luguentz Dort', 'OKC', 'SF', '6-4', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (178, 'Alex Ducas', 'OKC', 'SG', '6-6', '222');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (179, 'Adam Flagler', 'OKC', 'SG', '6-3', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (180, 'Shai Gilgeous-Alexander', 'OKC', 'PG', '6-6', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (181, 'Isaiah Hartenstein', 'OKC', 'C', '7-0', '255');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (182, 'Chet Holmgren', 'OKC', 'C', '7-1', '213');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (183, 'Isaiah Joe', 'OKC', 'SG', '6-5', '181');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (184, 'Dillon Jones', 'OKC', 'SF', '6-5', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (185, 'Malevy Leons', 'OKC', 'SF', '6-9', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (186, 'Ajay Mitchell', 'OKC', 'SG', '6-5', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (187, 'Alex Reese', 'OKC', 'PF', '6-9', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (188, 'Cason Wallace', 'OKC', 'SG', '6-4', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (189, 'Aaron Wiggins', 'OKC', 'SG', '6-6', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (190, 'Jalen Williams', 'OKC', 'SG', '6-6', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (191, 'Jaylin Williams', 'OKC', 'PF', '6-8', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (192, 'Kenrich Williams', 'OKC', 'PF', '6-7', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (193, 'Trey Alexander', 'DEN', 'SG', '6-4', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (194, 'Christian Braun', 'DEN', 'SG', '6-6', '218');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (195, 'Vlatko ÄanÄar', 'DEN', 'PF', '6-8', '236');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (196, 'Aaron Gordon', 'DEN', 'PF', '6-8', '235');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (197, 'PJ Hall', 'DEN', 'C', '6-8', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (198, 'Nikola JokiÄ', 'DEN', 'C', '6-11', '284');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (199, 'Spencer Jones', 'DEN', 'SF', '6-7', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (200, 'DeAndre Jordan', 'DEN', 'C', '6-11', '265');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (201, 'Jamal Murray', 'DEN', 'PG', '6-4', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (202, 'Zeke Nnaji', 'DEN', 'PF', '6-9', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (203, 'Jalen Pickett', 'DEN', 'SG', '6-4', '209');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (204, 'Michael Porter Jr.', 'DEN', 'SF', '6-10', '218');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (205, 'Dario Å ariÄ', 'DEN', 'C', '6-10', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (206, 'Julian Strawther', 'DEN', 'SG', '6-7', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (207, 'Hunter Tyson', 'DEN', 'PF', '6-8', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (208, 'Peyton Watson', 'DEN', 'SF', '6-8', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (209, 'Russell Westbrook', 'DEN', 'PG', '6-4', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (210, 'Nickeil Alexander-Walker', 'MIN', 'SG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (211, 'Jaylen Clark', 'MIN', 'SG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (212, 'Mike Conley', 'MIN', 'PG', '6-0', '175');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (213, 'Rob Dillingham', 'MIN', 'PG', '6-1', '176');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (214, 'Donte DiVincenzo', 'MIN', 'SG', '6-4', '203');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (215, 'PJ Dozier', 'MIN', 'SG', '6-6', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (216, 'Anthony Edwards', 'MIN', 'SG', '6-4', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (217, 'Jesse Edwards', 'MIN', 'C', '6-11', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (218, 'Luka Garza', 'MIN', 'C', '6-10', '235');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (219, 'Rudy Gobert', 'MIN', 'C', '7-1', '258');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (220, 'Bones Hyland', 'MIN', 'PG', '6-2', '173');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (221, 'Joe Ingles', 'MIN', 'SF', '6-8', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (222, 'Jaden McDaniels', 'MIN', 'PF', '6-9', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (223, 'Leonard Miller', 'MIN', 'SF', '6-10', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (224, 'Josh Minott', 'MIN', 'SF', '6-8', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (225, 'Tristen Newton', 'MIN', 'SG', '6-5', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (226, 'Daishen Nix', 'MIN', 'PG', '6-5', '224');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (227, 'Julius Randle', 'MIN', 'PF', '6-9', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (228, 'Naz Reid', 'MIN', 'C', '6-9', '264');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (229, 'Terrence Shannon Jr.', 'MIN', 'SG', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (230, 'Patrick Baldwin Jr.', 'LAC', 'SF', '6-9', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (231, 'Mo Bamba', 'LAC', 'C', '7-0', '231');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (232, 'Nicolas Batum', 'LAC', 'PF', '6-8', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (233, 'MarJon Beauchamp', 'LAC', 'SF', '6-6', '199');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (234, 'Bogdan BogdanoviÄ', 'LAC', 'SG', '6-5', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (235, 'Kobe Brown', 'LAC', 'PF', '6-7', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (236, 'Cam Christie', 'LAC', 'SG', '6-5', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (237, 'Amir Coffey', 'LAC', 'SG', '6-7', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (238, 'Kris Dunn', 'LAC', 'PG', '6-3', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (239, 'Drew Eubanks', 'LAC', 'C', '6-9', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (240, 'Trentyn Flowers', 'LAC', 'SF', '6-7', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (241, 'James Harden', 'LAC', 'PG', '6-5', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (242, 'Bones Hyland', 'LAC', 'PG', '6-2', '173');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (243, 'Derrick Jones Jr.', 'LAC', 'SF', '6-5', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (244, 'Kai Jones', 'LAC', 'C', '6-11', '218');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (245, 'Kawhi Leonard', 'LAC', 'SF', '6-7', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (246, 'Terance Mann', 'LAC', 'SG', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (247, 'Jordan Miller', 'LAC', 'SF', '6-7', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (248, 'Patty Mills', 'LAC', 'PG', '6-2', '180');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (249, 'Kevin Porter Jr.', 'LAC', 'SG', '6-4', '203');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (250, 'Norman Powell', 'LAC', 'SG', '6-3', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (251, 'Ben Simmons', 'LAC', 'PG', '6-10', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (252, 'Ivica Zubac', 'LAC', 'C', '7-0', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (253, 'Moses Brown', 'DAL', 'C', '7-2', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (254, 'Max Christie', 'DAL', 'SG', '6-6', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (255, 'Anthony Davis', 'DAL', 'PF', '6-10', '253');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (256, 'Spencer Dinwiddie', 'DAL', 'PG', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (257, 'Luka DonÄiÄ', 'DAL', 'PG', '6-6', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (258, 'Kessler Edwards', 'DAL', 'SF', '6-8', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (259, 'Dante Exum', 'DAL', 'PG', '6-5', '214');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (260, 'Daniel Gafford', 'DAL', 'C', '6-10', '234');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (261, 'Jazian Gortman', 'DAL', 'PG', '6-2', '184');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (262, 'Quentin Grimes', 'DAL', 'SG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (263, 'Jaden Hardy', 'DAL', 'SG', '6-4', '198');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (264, 'Kyrie Irving', 'DAL', 'SG', '6-2', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (265, 'Kai Jones', 'DAL', 'C', '6-11', '218');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (266, 'Kylor Kelley', 'DAL', 'C', '7-0', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (267, 'Maxi Kleber', 'DAL', 'PF', '6-10', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (268, 'Dereck Lively II', 'DAL', 'C', '7-1', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (269, 'Naji Marshall', 'DAL', 'SF', '6-7', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (270, 'Caleb Martin', 'DAL', 'SF', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (271, 'Markieff Morris', 'DAL', 'PF', '6-9', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (272, 'Dwight Powell', 'DAL', 'C', '6-10', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (273, 'Olivier-Maxence Prosper', 'DAL', 'PF', '6-8', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (274, 'Klay Thompson', 'DAL', 'SF', '6-5', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (275, 'P.J. Washington', 'DAL', 'PF', '6-7', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (276, 'Brandon Williams', 'DAL', 'PG', '6-1', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (277, 'Grayson Allen', 'PHO', 'SG', '6-4', '198');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (278, 'Bradley Beal', 'PHO', 'SG', '6-4', '207');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (279, 'Bol Bol', 'PHO', 'PF', '7-3', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (280, 'Devin Booker', 'PHO', 'SG', '6-6', '206');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (281, 'Jalen Bridges', 'PHO', 'SF', '6-8', '225');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (282, 'Ryan Dunn', 'PHO', 'SF', '6-6', '216');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (283, 'Kevin Durant', 'PHO', 'PF', '6-11', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (284, 'Collin Gillespie', 'PHO', 'PG', '6-1', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (285, 'Oso Ighodaro', 'PHO', 'PF', '6-10', '235');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (286, 'Tyus Jones', 'PHO', 'PG', '6-1', '196');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (287, 'Damion Lee', 'PHO', 'SG', '6-5', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (288, 'Cody Martin', 'PHO', 'SF', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (289, 'Vasilije MiciÄ', 'PHO', 'PG', '6-5', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (290, 'Monte Morris', 'PHO', 'PG', '6-2', '183');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (291, 'Jusuf NurkiÄ', 'PHO', 'C', '7-0', '290');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (292, 'Royce O`Neale', 'PHO', 'SF', '6-4', '226');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (293, 'Josh Okogie', 'PHO', 'SG', '6-4', '213');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (294, 'Mason Plumlee', 'PHO', 'C', '6-10', '254');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (295, 'Nick Richards', 'PHO', 'C', '7-0', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (296, 'TyTy Washington Jr.', 'PHO', 'PG', '6-3', '197');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (297, 'Max Christie', 'LAL', 'SG', '6-6', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (298, 'Anthony Davis', 'LAL', 'C', '6-10', '253');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (299, 'Luka DonÄiÄ', 'LAL', 'PG', '6-6', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (300, 'Dorian Finney-Smith', 'LAL', 'PF', '6-7', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (301, 'Jordan Goodwin', 'LAL', 'PG', '6-3', '200');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (302, 'Rui Hachimura', 'LAL', 'PF', '6-8', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (303, 'Jaxson Hayes', 'LAL', 'C', '7-0', '220');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (304, 'Jalen Hood-Schifino', 'LAL', 'SG', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (305, 'Bronny James', 'LAL', 'SG', '6-2', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (306, 'LeBron James', 'LAL', 'SF', '6-9', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (307, 'Trey Jemison', 'LAL', 'C', '6-11', '260');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (308, 'Maxi Kleber', 'LAL', 'PF', '6-10', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (309, 'Dalton Knecht', 'LAL', 'SF', '6-6', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (310, 'Christian Koloko', 'LAL', 'C', '7-1', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (311, 'Alex Len', 'LAL', 'C', '7-0', '250');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (312, 'Maxwell Lewis', 'LAL', 'SF', '6-7', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (313, 'Shake Milton', 'LAL', 'SG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (314, 'Markieff Morris', 'LAL', 'PF', '6-9', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (315, 'Quincy Olivari', 'LAL', 'PG', '6-3', '198');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (316, 'Austin Reaves', 'LAL', 'SG', '6-5', '206');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (317, 'Cam Reddish', 'LAL', 'SF', '6-8', '218');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (318, 'D`Angelo Russell', 'LAL', 'PG', '6-3', '193');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (319, 'Armel TraorÃ©', 'LAL', 'SF', '6-8', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (320, 'Jarred Vanderbilt', 'LAL', 'PF', '6-8', '214');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (321, 'Gabe Vincent', 'LAL', 'PG', '6-3', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (322, 'Jose Alvarado', 'NOP', 'PG', '6-0', '179');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (323, 'Mo Bamba', 'NOP', 'C', '7-0', '231');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (324, 'Brandon Boston Jr.', 'NOP', 'SG', '6-7', '185');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (325, 'Keion Brooks Jr.', 'NOP', 'SF', '6-7', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (326, 'Bruce Brown', 'NOP', 'PG', '6-4', '202');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (327, 'Jamal Cain', 'NOP', 'SF', '6-7', '191');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (328, 'Javonte Green', 'NOP', 'SG', '6-4', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (329, 'Jordan Hawkins', 'NOP', 'SG', '6-5', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (330, 'Brandon Ingram', 'NOP', 'SF', '6-8', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (331, 'Trey Jemison', 'NOP', 'C', '6-11', '260');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (332, 'Herbert Jones', 'NOP', 'SF', '6-8', '210');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (333, 'Kylor Kelley', 'NOP', 'C', '7-0', '215');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (334, 'Karlo MatkoviÄ', 'NOP', 'PF', '6-11', '231');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (335, 'CJ McCollum', 'NOP', 'PG', '6-3', '190');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (336, 'Yves Missi', 'NOP', 'C', '6-11', '235');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (337, 'Trey Murphy III', 'NOP', 'SF', '6-8', '206');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (338, 'Dejounte Murray', 'NOP', 'PG', '6-5', '180');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (339, 'Jaylen Nowell', 'NOP', 'SG', '6-4', '201');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (340, 'Kelly Olynyk', 'NOP', 'C', '6-11', '240');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (341, 'Elfrid Payton', 'NOP', 'PG', '6-3', '195');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (342, 'Lester QuiÃ±ones', 'NOP', 'SG', '6-5', '208');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (343, 'Antonio Reeves', 'NOP', 'SG', '6-5', '205');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (344, 'Jeremiah Robinson-Earl', 'NOP', 'PF', '6-9', '230');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (345, 'Daniel Theis', 'NOP', 'C', '6-8', '245');
+        INSERT INTO roster (Player_ID, Player_Name, Team_Code, Position, Height, Weight) 
+        VALUES (346, 'Zion Williamson', 'NOP', 'PF', '6-6', '284');

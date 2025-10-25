@@ -1,0 +1,38 @@
+
+                CREATE TABLE teams(
+                    Team_Code VARCHAR(3) NOT NULL PRIMARY KEY,
+                    Team_Name VARCHAR(20)
+                );
+                
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Boston Celtics'   , 'BOS'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('New York Knicks'   , 'NYK'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Milwaukee Bucks'   , 'MIL'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Cleveland Cavaliers'   , 'CLE'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Orlando Magic'   , 'ORL'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Indiana Pacers'   , 'IND'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Miami Heat'   , 'MIA'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Philadelphia 76ers'   , 'PHI'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Oklahoma City Thunder'   , 'OKC'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Denver Nuggets'   , 'DEN'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Minnesota Timberwolves'   , 'MIN'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Los Angeles Clippers'   , 'LAC'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Dallas Mavericks'   , 'DAL'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Phoenix Suns'   , 'PHO'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('Los Angeles Lakers'   , 'LAL'); 
+        
+        INSERT INTO teams (Team_Name, Team_Code) VALUES ('New Orleans Pelicans'   , 'NOP'); 
+        
