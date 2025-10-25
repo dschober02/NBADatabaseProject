@@ -111,7 +111,7 @@ def teamsInserts():
     sql = f"""
                 CREATE TABLE teams(
                     Team_Code VARCHAR(3) NOT NULL PRIMARY KEY,
-                    Team_Name VARCHAR
+                    Team_Name VARCHAR(20)
                 );
                 """
     out.write(sql)
