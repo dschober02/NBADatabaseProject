@@ -39,7 +39,7 @@ file = open('gameTable.txt', 'w')
 file.write(f"""
     CREATE TABLE Game (
         Game_ID INT NOT NULL PRIMARY KEY,
-        Date varchar(20)
+        `Date` varchar(30)
 );
 
     CREATE TABLE Schedule (
@@ -56,16 +56,17 @@ for url in URLS:
         # Each team name appears inside <strong><a> tags within divs with class 'scorebox'
         scorebox = soup.find("div", class_="scorebox")
         team_links = scorebox.find_all("a", href=re.compile(r"^/teams/([A-Z]{3})/"))
-        print(team_links)
-        time.sleep(5)
+        time.sleep(4)
 
         date = soup.find('div', class_='scorebox_meta')
-        date = date.find_all("div")[0].strip()
+        date = date.find_all("div")[0].text
 
-        file.write(f'INSERT INTO Schedule (Game_ID, Date) VALUES ({counter}, {date});\n'
-                   f'INSERT INTO Game (Game_ID, Date) VALUES ({counter}, {team_links[0]});\n)'
-                   f'INSERT INTO Game (Game_ID, Date) VALUES ({counter}, {team_links[1]});\n)')
+        file.write(f'INSERT INTO Game (Game_ID, `Date`) VALUES (\'{counter}\', \'{date}\');\n'
+                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{team_links[0].text}\');\n'
+                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{team_links[1].text}\');\n')
 
 
     except Exception as e:
         print(e)
+
+file.close()
