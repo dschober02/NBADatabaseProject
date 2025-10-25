@@ -13,38 +13,6 @@ headers = {
         "Cache-Control": "max-age=0"
 }
 
-nba_team_code = {
-    "Boston Celtics": "BOS",
-    "Brooklyn Nets": "BRK",
-    "New York Knicks": "NYK",
-    "Philadelphia 76ers": "PHI",
-    "Toronto Raptors": "TOR",
-    "Golden State Warriors": "GSW",
-    "LA Clippers": "LAC",
-    "Los Angeles Lakers": "LAL",
-    "Phoenix Suns": "PHO",
-    "Sacramento Kings": "SAC",
-    "Chicago Bulls": "CHI",
-    "Cleveland Cavaliers": "CLE",
-    "Detroit Pistons": "DET",
-    "Indiana Pacers": "IND",
-    "Milwaukee Bucks": "MIL",
-    "Dallas Mavericks": "DAL",
-    "Houston Rockets": "HOU",
-    "Memphis Grizzlies": "MEM",
-    "New Orleans Pelicans": "NOP",
-    "San Antonio Spurs": "SAS",
-    "Atlanta Hawks": "ATL",
-    "Charlotte Hornets": "CHO",
-    "Miami Heat": "MIA",
-    "Orlando Magic": "ORL",
-    "Washington Wizards": "WAS",
-    "Denver Nuggets": "DEN",
-    "Minnesota Timberwolves": "MIN",
-    "Oklahoma City Thunder": "OKC",
-    "Portland Trail Blazers": "POR",
-    "Utah Jazz": "UTA"
-}
 
 URLS = ['https://www.basketball-reference.com/boxscores/202504190IND.html', 'https://www.basketball-reference.com/boxscores/202504190DEN.html', 'https://www.basketball-reference.com/boxscores/202504190DEN.html', 'https://www.basketball-reference.com/boxscores/202504190NYK.html',
  'https://www.basketball-reference.com/boxscores/202504190LAL.html', 'https://www.basketball-reference.com/boxscores/202504200OKC.html',
@@ -71,7 +39,7 @@ file = open('gameTable.txt', 'w')
 file.write(f"""
     CREATE TABLE Game (
         Game_ID INT NOT NULL PRIMARY KEY,
-        Date varchar(20)
+        `Date` varchar(30)
 );
 
     CREATE TABLE Schedule (
@@ -88,16 +56,17 @@ for url in URLS:
         # Each team name appears inside <strong><a> tags within divs with class 'scorebox'
         scorebox = soup.find("div", class_="scorebox")
         team_links = scorebox.find_all("a", href=re.compile(r"^/teams/([A-Z]{3})/"))
-        print(team_links)
-        time.sleep(5)
+        time.sleep(4)
 
         date = soup.find('div', class_='scorebox_meta')
-        date = date.find_all("div")[0].strip()
+        date = date.find_all("div")[0].text
 
-        file.write(f'INSERT INTO Schedule (Game_ID, Date) VALUES ({counter}, {date});\n'
-                   f'INSERT INTO Game (Game_ID, Date) VALUES ({counter}, {nba_team_code[team_links[0]]});\n)'
-                   f'INSERT INTO Game (Game_ID, Date) VALUES ({counter}, {nba_team_code[team_links[1]]});\n)')
+        file.write(f'INSERT INTO Game (Game_ID, `Date`) VALUES (\'{counter}\', \'{date}\');\n'
+                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{team_links[0].text}\');\n'
+                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{team_links[1].text}\');\n')
 
 
     except Exception as e:
         print(e)
+
+file.close()
