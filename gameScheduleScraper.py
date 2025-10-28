@@ -20,7 +20,7 @@ nba_team_code = {
     "Philadelphia 76ers": "PHI",
     "Toronto Raptors": "TOR",
     "Golden State Warriors": "GSW",
-    "LA Clippers": "LAC",
+    "Los Angeles Clippers": "LAC",
     "Los Angeles Lakers": "LAL",
     "Phoenix Suns": "PHO",
     "Sacramento Kings": "SAC",
@@ -92,10 +92,10 @@ for url in URLS:
 
         date = soup.find('div', class_='scorebox_meta')
         date = date.find_all("div")[0].text
-
+        print("Writing!")
         file.write(f'INSERT INTO Game (Game_ID, `Date`) VALUES (\'{counter}\', \'{date}\');\n'
-                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{nba_team_code[team_links[0]]}\');\n'
-                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{nba_team_code[team_links[1]]}\');\n')
+                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{nba_team_code[team_links[0].text]}\');\n'
+                   f'INSERT INTO Schedule (Game_ID, Team_Code) VALUES (\'{counter}\', \'{nba_team_code[team_links[1].text]}\');\n')
 
 
     except Exception as e:
